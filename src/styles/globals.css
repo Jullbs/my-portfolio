@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .hover-plus-transition {
+    @apply hover:text-acid-green hover:cursor-pointer transition ease-in duration-300;
+  }
+}
