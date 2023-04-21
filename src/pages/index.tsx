@@ -1,4 +1,5 @@
 import Introduction from '@/components/Introduction'
+import Projects from '@/components/Projects'
 import Skills from '@/components/Skills'
 import Socials from '@/components/Socials'
 import Head from 'next/head'
@@ -17,6 +18,7 @@ export default function Home() {
 
       <Introduction />
       <Skills />
+      <Projects />
     </>
   )
 }
