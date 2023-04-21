@@ -43,12 +43,14 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="min-h-screen flex flex-col justify-center gap-2 pr-20 md:px-20"
+      className="min-h-screen flex flex-col justify-center gap-2 pr-10 sm:pr-20 md:px-20"
     >
       <p className="pl-5 x-sm:pl-10 font-thin italic text-xs text-gray-200">
         &lt;section&gt;
       </p>
-      <p className="text-5xl text-white pl-16 x-sm:pl-24">&gt; Projects</p>
+      <p className="text-4xl x-sm:text-5xl text-white pl-16 x-sm:pl-24">
+        &gt; Projects
+      </p>
       <ul className="flex flex-col flex-wrap items-center gap-28 pt-20 pb-10 pl-16 sm:pl-24">
         {projects.map((project) => {
           return (
@@ -58,23 +60,23 @@ export default function Projects() {
             >
               <Image
                 src={project.image}
-                width={500}
-                height={240}
+                width={300}
+                height={145}
                 alt=""
-                className="max-w-[500px] max-h-[242px] rounded-3xl"
+                className="sm:w-[500px] sm:h-[242px] rounded-3xl"
               />
               <div className="flex flex-col flex-wrap gap-8 m-auto">
                 <span className="flex justify-between">
                   <h2 className="text-xl font-bold">{project.title}</h2>
                   {project.status === 'concluded' ? (
                     <div className="flex gap-8 text-acid-green">
-                      <a href={project.url}>
+                      <a href={project.url} target="_blank">
                         <Icon
                           icon="ph:magnifying-glass-bold"
                           className="w-8 h-8 hover:scale-125 transition ease-in duration-300"
                         />
                       </a>
-                      <a href={project.repository}>
+                      <a href={project.repository} target="_blank">
                         <Icon
                           icon="ph:code-bold"
                           className="w-8 h-8 hover:scale-125 transition ease-in duration-300"
@@ -94,7 +96,7 @@ export default function Projects() {
                   {project.tecnologies.map((tech) => {
                     return (
                       <p
-                        key="tech"
+                        key={tech}
                         className="px-4 border-r-2 last:border-0 border-baby-blue"
                       >
                         {tech}

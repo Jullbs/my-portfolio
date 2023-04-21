@@ -17,13 +17,15 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="min-h-screen flex flex-col justify-center gap-2 pr-20 sm:px-20"
+      className="min-h-screen flex flex-col justify-center gap-2 pr-16 x-sm:pr-20 sm:px-20"
     >
       <p className="pl-5 x-sm:pl-10 font-thin italic text-xs text-gray-200">
         &lt;section&gt;
       </p>
 
-      <h2 className="text-5xl text-white pl-16 x-sm:pl-24">&gt; Skills</h2>
+      <h2 className="text-4xl x-sm:text-5xl text-white pl-16 x-sm:pl-24">
+        &gt; Skills
+      </h2>
       <ul className="flex flex-shrink flex-wrap max-w-[60rem] mx-auto justify-center gap-16 pt-20 pb-10">
         {skills.map((skill) => {
           return (
