@@ -51,12 +51,12 @@ export default function Projects() {
       <p className="text-4xl x-sm:text-5xl text-white pl-16 x-sm:pl-24">
         &gt; Projects
       </p>
-      <ul className="flex flex-col flex-wrap items-center gap-28 pt-20 pb-10 px-4 sm:pl-10 lg:pl-24">
+      <ul className="flex flex-col flex-wrap items-center justify-center gap-28 pt-20 pb-10 px-4 sm:pl-10 lg:pl-24">
         {projects.map((project) => {
           return (
             <li
               key={project.title}
-              className="max-w-[80rem] flex items-center max-[1210px]:flex-wrap max-[1210px]:justify-center sm:pr-20 gap-16 text-white"
+              className="max-w-[80rem] flex items-center max-[1210px]:flex-wrap max-[1210px]:justify-center gap-16 text-white"
             >
               <Image
                 src={project.image}
