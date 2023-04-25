@@ -17,7 +17,7 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="min-h-screen flex flex-col justify-center gap-2 pr-16 x-sm:pr-20 sm:px-20"
+      className="min-h-screen flex flex-col justify-center gap-2 sm:pr-20 sm:px-20"
     >
       <p className="pl-5 x-sm:pl-10 font-thin italic text-xs text-gray-200">
         &lt;section&gt;

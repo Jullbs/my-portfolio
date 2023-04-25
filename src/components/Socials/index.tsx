@@ -17,7 +17,7 @@ export default function Socials() {
   ]
 
   return (
-    <section className="fixed right-0 h-screen flex flex-col justify-center gap-6 items-end pr-4 text-gray-100">
+    <section className="fixed bg-gray-600 p-3 max-sm:bottom-0 max-sm:w-screen sm:right-0 sm:h-screen flex sm:flex-col justify-center gap-6 items-end pr-4 text-gray-100">
       {socials.map((social) => {
         return (
           <Link key={social.title} href={social.url} target="_blank">

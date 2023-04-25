@@ -33,7 +33,7 @@ export default function Projects() {
       status: 'in progress',
       image: '/static/images/rick-and-morty.png',
       description:
-        'A web app that fetches information about the universe and characters of Rick and Morty from a GraphQL api and displays it for the user.',
+        'In development: A web app that fetches information about the universe and characters of Rick and Morty from a GraphQL api and displays it for the user.',
       tecnologies: ['Next.js', 'ReactJS', 'Typescript', 'Tailwind', 'GraphQL'],
       url: '',
       repository: '',
@@ -43,7 +43,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="min-h-screen flex flex-col justify-center gap-2 pr-10 sm:pr-20 md:px-20"
+      className="min-h-screen flex flex-col justify-center gap-2 sm:pr-20 md:px-20"
     >
       <p className="pl-5 x-sm:pl-10 font-thin italic text-xs text-gray-200">
         &lt;section&gt;
@@ -51,23 +51,27 @@ export default function Projects() {
       <p className="text-4xl x-sm:text-5xl text-white pl-16 x-sm:pl-24">
         &gt; Projects
       </p>
-      <ul className="flex flex-col flex-wrap items-center gap-28 pt-20 pb-10 pl-16 sm:pl-24">
+      <ul className="flex flex-col flex-wrap items-center gap-28 pt-20 pb-10 px-4 sm:pl-10 lg:pl-24">
         {projects.map((project) => {
           return (
             <li
               key={project.title}
-              className="max-w-[80rem] flex items-center max-[1210px]:flex-wrap max-[1210px]:justify-center max-[1210px]:pr-20 gap-16 text-white"
+              className="max-w-[80rem] flex items-center max-[1210px]:flex-wrap max-[1210px]:justify-center sm:pr-20 gap-16 text-white"
             >
               <Image
                 src={project.image}
                 width={300}
-                height={145}
+                height={100}
+                quality={100}
                 alt=""
-                className="sm:w-[500px] sm:h-[242px] rounded-3xl"
+                className="w-[31.25rem] h-[15.125rem] rounded-3xl object-cover"
               />
-              <div className="flex flex-col flex-wrap gap-8 m-auto">
+
+              <div className="flex flex-col flex-wrap gap-8 m-auto ">
                 <span className="flex justify-between">
-                  <h2 className="text-xl font-bold">{project.title}</h2>
+                  <h2 className="text-xl font-bold self-end">
+                    {project.title}
+                  </h2>
                   {project.status === 'concluded' ? (
                     <div className="flex gap-8 text-acid-green">
                       <a href={project.url} target="_blank">
@@ -84,9 +88,10 @@ export default function Projects() {
                       </a>
                     </div>
                   ) : (
-                    <p className="text-xl font-bold text-acid-green">
-                      In development
-                    </p>
+                    <Icon
+                      icon="fluent-mdl2:progress-ring-dots"
+                      className="w-8 h-8 text-acid-green hover:animate-spin-slow transition ease-in"
+                    />
                   )}
                 </span>
                 <p className="font-extralight text-gray-300">
@@ -97,7 +102,7 @@ export default function Projects() {
                     return (
                       <p
                         key={tech}
-                        className="px-4 border-r-2 last:border-0 border-baby-blue"
+                        className="px-4 sm:border-r-2 sm:last:border-0 sm:border-baby-blue"
                       >
                         {tech}
                       </p>
