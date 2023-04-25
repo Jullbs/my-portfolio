@@ -1,6 +1,6 @@
 export default function Introduction() {
   return (
-    <section className="h-screen flex flex-col justify-center gap-2 pr-20 sm:px-20 font-thin italic text-xs text-gray-200">
+    <section className="h-screen flex flex-col justify-center gap-2 pr-20 md:px-20 mb-[-6rem] font-thin italic text-xs text-gray-200">
       <p>&lt;main&gt;</p>
       <p className="pl-5 x-sm:pl-10">&lt;section&gt;</p>
       <p className="pl-10 x-sm:pl-20">&lt;h1&gt;</p>
